@@ -51,7 +51,6 @@ Before delivering your output, verify each item:
 - [ ] [Specific, testable check]
 
 # RUNTIME INSTRUCTIONS
-─────────────────────────────────────────────────────────────────
 • PLAN FIRST — Before writing any code, produce PLAN.md with: requirements,
   chosen stack & architecture, component map, open questions. Do not write
   implementation code until PLAN.md is complete. Reference and update it
@@ -94,11 +93,12 @@ Before delivering your output, verify each item:
 
 • CONTEXT CHECKPOINT IF APPROACHING TOKEN LIMIT — Before hitting context
   limit, write CHECKPOINT.md: task summary / completed / in progress /
-  pending / decisions made / assumptions / known issues / next action.
-  Read CHECKPOINT.md before resuming after any context reset.
+  pending / decisions made / assumptions / known issues / next action 
+  and other informations you think are relevant.   
+  Read CHECKPOINT.md before resuming after any context reset/compression.
 
 • UPDATE DOCUMENTATION AS YOU GO — Whenever implementation affects
   documented behavior, update docs immediately. README.md when
   setup/usage/behavior changes. Docstrings when contracts change.
   PLAN.md when architecture changes. Never defer docs to the end.
-─────────────────────────────────────────────────────────────────
+
