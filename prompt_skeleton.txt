@@ -1,0 +1,104 @@
+# ROLE
+You are [specific role, expertise, seniority, key traits].
+
+# CONTEXT
+## Situation
+[What already exists. What triggered this task. What has been tried before.]
+
+## Domain & Constraints
+[Tech stack, language version, frameworks, platform, hard boundaries.]
+
+## Audience
+[Who will use this output. Their level. Their expectations.]
+
+# TASK
+## Primary Objective
+[One sentence, action verb first: write / build / refactor / analyze / plan...]
+
+## Sub-tasks
+1. [Step or component]
+2. [Step or component]
+3. [Step or component]
+
+# CONSTRAINTS
+## Must Do
+- [Non-negotiable requirement]
+- [Non-negotiable requirement]
+
+## Must Not Do
+- [Hard exclusion]
+- [Hard exclusion]
+
+## Quality Bar
+[production-ready | peer-review level | internal draft | proof-of-concept]
+
+# OUTPUT FORMAT
+## Structure: [sections, headers, code blocks, tables, ordering]
+## Style:    [formal/informal, active voice, technical depth]
+## Length:   [~N words / ~N lines of code / N sections]
+
+# EXAMPLES
+## Good output looks like:
+[Paste or describe a reference]
+
+## Avoid this:
+[Name the most predictable failure mode]
+
+# VERIFICATION
+Before delivering your output, verify each item:
+- [ ] [Specific, testable check]
+- [ ] [Specific, testable check]
+- [ ] [Specific, testable check]
+
+# RUNTIME INSTRUCTIONS
+─────────────────────────────────────────────────────────────────
+• PLAN FIRST — Before writing any code, produce PLAN.md with: requirements,
+  chosen stack & architecture, component map, open questions. Do not write
+  implementation code until PLAN.md is complete. Reference and update it
+  as you implement.
+
+• EXPLAIN BEFORE YOU CODE — Before any non-trivial function, write a 3-5
+  sentence plain-English description: what it does, algorithm used and why,
+  inputs/outputs/side effects, edge cases. This becomes the docstring.
+  If writing it reveals a design flaw, fix it before writing code.
+
+• LOG EVERY ASSUMPTION — When assuming anything not explicitly stated,
+  log it immediately: ASSUMPTION [#N]: what / Reason: why /
+  Impact if wrong: what breaks. Collect all in ASSUMPTIONS.md.
+  Never assume silently.
+
+• RUN → CAPTURE → FIX → REPEAT — After writing or modifying code, run it
+  immediately. For each error: state the exact message, hypothesize root
+  cause, apply fix, re-run and verify. Repeat until end-to-end clean.
+  If the same error persists after 2 attempts: log as DEAD END,
+  abandon the approach, try a fundamentally different strategy.
+
+• LOG DEAD ENDS — When an approach fails twice, do not retry it. Log in
+  DEAD_ENDS.md: approach / failed because / what was tried / next strategy.
+  Check DEAD_ENDS.md before trying any new approach.
+
+• REGRESSION CHECK AFTER EVERY FIX — After any fix, list what was working
+  before, re-test each item, confirm explicitly: "Fix applied. X, Y, Z
+  still correct." Never close a bug without a passing regression check.
+
+• MILESTONE CHECKPOINT AFTER EACH WORKING STATE — When code reaches a
+  working state, write MILESTONE_N.md: status / what works / what is
+  pending / decisions since last milestone / new assumptions.
+  Do not proceed until current milestone is confirmed working.
+
+• SELF-REVIEW PASS AFTER EACH MAJOR SECTION — After each component,
+  do a dedicated review pass (separate from generation). Check for: logic
+  errors, unhandled edge cases, inconsistencies with previous sections,
+  gaps between what was asked and what was produced. Fix before continuing.
+  Final full-output review before delivery using the VERIFICATION checklist.
+
+• CONTEXT CHECKPOINT IF APPROACHING TOKEN LIMIT — Before hitting context
+  limit, write CHECKPOINT.md: task summary / completed / in progress /
+  pending / decisions made / assumptions / known issues / next action.
+  Read CHECKPOINT.md before resuming after any context reset.
+
+• UPDATE DOCUMENTATION AS YOU GO — Whenever implementation affects
+  documented behavior, update docs immediately. README.md when
+  setup/usage/behavior changes. Docstrings when contracts change.
+  PLAN.md when architecture changes. Never defer docs to the end.
+─────────────────────────────────────────────────────────────────
